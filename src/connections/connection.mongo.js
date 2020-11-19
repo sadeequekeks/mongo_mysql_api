@@ -1,9 +1,9 @@
-//const mongoose = require('mongoose');
-//const { host, port, username, password, database } = require('../configs').mongoDb;
+// const mongoose = require('mongoose');
+// const { host, port, username, password, database } = require('../configs').mongoDb;
 const { MONGOHOST, MONGOUSER, MONGOPASS, MONGOPORT, MONGODB } = process.env;
 
 const mongoose = require('mongoose');
-let host = MONGOHOST || 'mongodb',
+let host = MONGOHOST || 'localhost',
     port = MONGOPORT || '27017',
     username = MONGOUSER || 'sadeeque',
     password = MONGOPASS || 'secret',

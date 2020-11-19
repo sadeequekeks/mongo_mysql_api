@@ -21,7 +21,7 @@ module.exports = () => {
             if (flag) {
                 user.password = '************';
                 let token = await generateToken(user._id, user.userType);
-                let rftoken = await generateToken(user._id, user.userType);
+                let rftoken = await refreshToken(user._id, user.userType);
                 const payload = { user: user, token: token, refToken: rftoken };
                 res.status(200).json({ status: 'success', payload: payload, message: 'User Logged In successfully!' });
             } else {
